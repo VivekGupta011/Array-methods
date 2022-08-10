@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const employee = [
+        {
+          name: "vivek1",
+          id: 1,
+          salary: 500,
+          lastName: "gupta1",
+        },
+        {
+          name: "vivek2",
+          id: 2,
+          salary: 1000,
+          lastName: "gupta2",
+        },
+        {
+          name: "vivek3",
+          id: 3,
+          salary: 1500,
+          lastName: "gupta3",
+        },
+        {
+          name: "vivek4",
+          id: 4,
+          salary: 2000,
+          lastName: "gupta4",
+        },
+      ];
+
+      // using filter method
+      console.log(
+        employee.filter((item) => {
+          return item.name;
+        })
+      );
+
+      // using map method
+      console.log(
+        employee.map((item) => {
+          return item.name;
+        })
+      );
+    </script>
+  </body>
+</html>
