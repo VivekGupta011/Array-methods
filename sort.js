@@ -50,7 +50,7 @@ const employee = [
     },
   ];
 
-
+// for ascending order type 1
   console.log(
     employee.sort((a,b)=>{
         if(a.name > b.name) return 1;
@@ -58,3 +58,29 @@ const employee = [
         else return 0;
     })
   )
+
+//   for descending order type2
+  console.log(
+    employee.sort((a,b)=>{
+        if(a.salary < b.salary) return 1;
+        else if(a.salary > b.salary) return -1;
+        else return 0;
+    })
+  )
+
+  // type 3
+
+  console.log(
+    employee.sort((a,b)=>{
+      if(a.salary>b.salary){
+        return 1;
+      }else{
+        return -1;
+      }
+    })
+  );
+
+  // type4
+  console.log(employee.sort((a,b)=>{
+    return b.salary-a.salary
+  }))
