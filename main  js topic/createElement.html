@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .create_testClass {
+        background-color: aqua;
+        font-size: x-large;
+        color: blue;
+      }
+      .person {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: yellowgreen;
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <button id="testing_btn">click me!</button>
+      <p class="text">this is testing</p>
+
+      <button id="testing_btn1">click me!</button>
+    </div>
+
+    <script>
+      const btn = document.getElementById("testing_btn");
+      const btn1 = document.getElementById("testing_btn1");
+      function test() {
+        let newH1 = document.createElement("h2");
+        newH1.classList.add("create_testClass");
+        let txt = document.createTextNode("this is create element text");
+        newH1.appendChild(txt);
+        let divid = document.getElementById("main");
+        divid.appendChild(newH1);
+      }
+
+      function test1() {
+        let element = document.createElement("div");
+        element.classList.add("person");
+        element.innerHTML = `<h1><strong>this is vivek</strong> this is vivek2 </h1>`;
+        let divid1 = document.getElementById("main");
+        divid1.appendChild(element);
+      }
+
+      btn.addEventListener("click", test);
+
+      btn1.addEventListener("click", test1);
+    </script>
+  </body>
+</html>
